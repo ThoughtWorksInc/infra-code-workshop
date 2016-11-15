@@ -85,9 +85,11 @@ User: arn:aws:iam::644540006937:user/rafa is not authorized to perform: iam:GetA
 
 * Cole o link copiado do browser root
 
-* Aceite as sugestões e <img src="../imagens/iam_switch_role.png" alt="Switch Role" style="width: 100px;"/>
+* Aceite as sugestões e
+![Switch Role](../imagens/iam_switch_role.png)
 
-* Atenção ao canto superior direito: <img src="../imagens/iam_role_label.png" alt="Role Label" style="width: 350px;"/>
+* Atenção ao canto superior direito:
+![Role Label](../imagens/iam_role_label.png)
 
 * Tente abrir o IAM
 
