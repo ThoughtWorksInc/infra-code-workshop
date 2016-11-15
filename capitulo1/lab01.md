@@ -9,6 +9,7 @@
 * _Use grouops to assign permissions_: crie um grupo chamado **dev** com _policy_ **PowerUserAccess** e adicione os usuários do par nele
 
 * _Apply an IAM policy_: Use a sugestão abaixo
+
 ![iam password policy](../imagens/iam_password_policy.png)
 
 * Criar senha para seus usuários
@@ -86,9 +87,11 @@ User: arn:aws:iam::644540006937:user/rafa is not authorized to perform: iam:GetA
 * Cole o link copiado do browser root
 
 * Aceite as sugestões e
+
 ![Switch Role](../imagens/iam_switch_role.png)
 
 * Atenção ao canto superior direito:
+
 ![Role Label](../imagens/iam_role_label.png)
 
 * Tente abrir o IAM
