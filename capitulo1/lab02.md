@@ -145,15 +145,18 @@ SYNOPSIS
 * Precisamos descobrir o ARN da _role becomeAdmin_, já o `--role-session-name` pode ser um texto qualquer
 
 * Acesse a console AWS com seu(sua) usuário(a) criado(a) no [Lab01](lab01.md#parte-1---completar-items-do-iam-security-status-e-deixá-los-todos-verdinhos)
-https://devopslabs<# da sua conta>.signin.aws.amazon.com/console
+
+  https://devopslabs<# da sua conta>.signin.aws.amazon.com/console
 
 * Faça o _Switch Role_ para _becomeAdmin@devopslabs<#>_ como no Lab01
 
 * Clique
-IAM > Roles > becomeAdmin
+
+  IAM > Roles > becomeAdmin
 
 * Copie o **_Role ARN_**
-**_ARN_:** é [_Amazon Resource Names_](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)
+
+  **_ARN_:** é [_Amazon Resource Names_](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)
 
 * Monte o comando e execute
 ```
@@ -173,4 +176,3 @@ aws iam list-users
 ```
 
 * Funcionou! (Espero hehe)
-
