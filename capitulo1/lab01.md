@@ -1,7 +1,7 @@
 ## Lab01 - **IAM - Identity and Access Management**
 ![iam](../imagens/iam.png)
 
-### Parte 1 - Completar items do _IAM Security Status_ e deixá-los todos verdinhos
+### Parte 1 - Completando items do _IAM Security Status_ e deixá-los todos verdinhos
 * _Active MFA_: usando o [authy](https://www.authy.com) do instrutor(a), ative _MFA (Multi Factor Authentication)_.
 
 * _Create individual IAM users_: crie um usuário para cada dev do par
@@ -19,7 +19,7 @@ Garanta que *"Generate an access key for each user"* esteja selecionado e faça 
 
 * Acesse com seu usuário através de um outro browser
 
-### Parte 2 - Testar usuários criados
+### Parte 2 - Testando usuários criados
 Qual URL irá usar para acessar essa conta sem a root credentials?
 
 Daqui por diante o **browser root** refere-se ao browser logado como root e **browser poweruser** refere-se ao browser logado com seu usuário.
@@ -63,7 +63,7 @@ User: arn:aws:iam::644540006937:user/rafa is not authorized to perform: iam:GetA
 }
 ```
 
-### Parte 3 - Dar acesso estilo "sudo"
+### Parte 3 - Dando acesso estilo "sudo"
 **No browser root**
 * IAM > Roles > Create New Role
 
