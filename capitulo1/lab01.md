@@ -5,8 +5,9 @@
 * _Active MFA_: usando o [authy](https://www.authy.com) do instrutor(a), ative _MFA (Multi Factor Authentication)_.
 
 * _Create individual IAM users_: crie um usuário para cada dev do par
+Garanta que *"Generate an access key for each user"* esteja selecionado e faça o _download_ das credenciais.
 
-* _Use grouops to assign permissions_: crie um grupo chamado **dev** com _policy_ **PowerUserAccess** e adicione os usuários do par nele
+* _Use groups to assign permissions_: crie um grupo chamado **dev** com _policy_ **PowerUserAccess** e adicione os usuários do par nele
 
 * _Apply an IAM policy_: Use a sugestão abaixo
 
