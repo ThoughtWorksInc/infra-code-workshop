@@ -19,7 +19,31 @@ Vamos trabalhar carregando nossas credenciais permamentes nas variáveis de ambi
 
 * Selecione **_ReadOnlyAccess_** e clique **_Attach Policy_**
 
-* Verifique o conteúdo da política clicando em **_Show Policy_** e feche a console
+* Verifique o conteúdo da política clicando em **_Show Policy_**
+
+* Esta permissão restringe até a ação **_sts:AssumeRole_**, necessária para o Switch Role que acabamos de fazer
+
+* Para continuar permitindo a troca de **_role_** clique
+
+  Policies > Create Policy > Policy Generator
+
+  **_Effect_:** Allow
+  **_AWS Service_:** AWS Security Token Service
+  **_Actions_:** AssumeRole
+  **_Amazon Resource Name (ARN)_:** arn:aws:iam::111111111111:role/becomeAdmin
+  Você pode encontrar sua _role ARN_ no capitulo1-lab02
+
+* Clique **_Add Statement_** e **_Next Step_**
+
+* Altere **_Policy Name_** para _allowBecomeAdmin_
+
+* De volta à lista de _Policies_, clique sobre a política criada
+
+* Na aba **_Attached Entities_**, clique **_Attach_**
+
+* Selecione o grupo _dev_ e clique em **_Attach Policy_**
+
+* Pronto. Tudo certo, feche a console
 
 * Na raiz do repositório crie um arquivo `.env` e salve as credenciais de seu(sua) usuário(a) nele da seguinte forma
 ```
