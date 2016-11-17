@@ -104,4 +104,69 @@ make docker.shell
 ```
 
 ### Parte 2 - Manipulando as credenciais temporárias (SLC)
+No [capítulo anterior](../capitulo1/lab02.md#slc---short-lived-credentials-credenciais-de-vida-curta) usamos o comando `aws sts assume-role` para pegar credenciais temporárias.
+Mas o retorno foi um JSON e tivemos e copiar que colar o resultado nas variáveis de ambientes para só então fazer uso do acesso com permissões elevadas.
+Neste lab vamos apresentar uma das formas de automatizar isso.
 
+* Crie o arquivo `entrypoint.sh` na raiz do repositório com o seguinte código
+```
+#!/bin/bash -e
+# borrowed from Erik Doernenburg:
+# https://my.thoughtworks.com/groups/techops-community/blog/2015/11/17/aws-account-access-via-temporary-api-tokens#comment-38435
+ROLE=becomeAdmin
+ACCOUNT=644540006937
+DURATION=3600
+
+# KST=access*K*ey, *S*ecretkey, session*T*oken
+KST=(`aws sts assume-role --role-arn "arn:aws:iam::$ACCOUNT:role/$ROLE" \
+--role-session-name buildpack-iac \
+--duration-seconds $DURATION \
+--query '[Credentials.AccessKeyId,Credentials.SecretAccessKey,Credentials.SessionToken]' \
+--output text`)
+
+export AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION:-us-east-1}
+export AWS_ACCESS_KEY_ID=${KST[0]}
+export AWS_SECRET_ACCESS_KEY=${KST[1]}
+export AWS_SESSION_TOKEN=${KST[2]}
+
+exec $@
+```
+
+* Adicione o arquivo à imagem docker e use-o como comando de entrada
+```
+# Dockerfile
+...
+WORKDIR /iac
+COPY entrypoint.sh entrypoint.sh
+
+ENTRYPOINT ["./entrypoint.sh"]
+```
+
+* Abra um _shell_ no container e verifique se o script funciona
+```
+make docker.shell
+```
+
+* O script não existe no container, certo?
+
+* Temos que rodar o _build_ da imagem novamente
+
+* Altere o arquivo _make_ para adicionar a etapa **docker.build** como dependência da **docker.shell**
+```
+# Makefile
+...
+docker.shell: docker.build
+  @docker run --rm \
+...
+```
+
+* Tente usar o _script_ no container novamente, realizando uma operação que cria recurso na AWS
+```
+make docker.shell
+root@46598b963f3f:/iac# aws s3api create-bucket --bucket meuTeste
+{
+    "Location": "/meuTeste"
+}
+```
+
+É isso 😉, agora o container tem permissões suficientes para executar as próximas tarefas que vamos automatizar.
