@@ -27,10 +27,10 @@ Vamos trabalhar carregando nossas credenciais permamentes nas variáveis de ambi
 
   Policies > Create Policy > Policy Generator
 
-  **_Effect_:** Allow
-  **_AWS Service_:** AWS Security Token Service
-  **_Actions_:** AssumeRole
-  **_Amazon Resource Name (ARN)_:** arn:aws:iam::111111111111:role/becomeAdmin
+  * **_Effect_:** Allow
+  * **_AWS Service_:** AWS Security Token Service
+  * **_Actions_:** AssumeRole
+  * **_Amazon Resource Name (ARN)_:** arn:aws:iam::111111111111:role/becomeAdmin
   Você pode encontrar sua _role ARN_ no capitulo1-lab02
 
 * Clique **_Add Statement_** e **_Next Step_**
