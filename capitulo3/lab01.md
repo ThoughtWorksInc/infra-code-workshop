@@ -122,7 +122,7 @@ aws cloudformation create-stack --stack-name example-stack --template-body file:
 * Abra o painel do serviço _CloudFormation_ na console web para acompanhar a criação da _stack_
 https://console.aws.amazon.com/cloudformation
 
-* Verifique na aba **_Output_** o IP e FQDN públicos da instância e acesse com o comando
+* Verifique na aba **_Output_** o IP e FQDN (_Fully Qualified Domain Name_) públicos da instância e acesse com o comando
 ```
 ssh -i /path/para/arquivo/<chave_ssh_privada.pem> ec2-user@<FQDN ou IP público>
 ```
