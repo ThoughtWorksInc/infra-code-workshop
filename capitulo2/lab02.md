@@ -111,7 +111,7 @@ Neste lab vamos apresentar uma das formas de automatizar isso.
 * Crie o arquivo `entrypoint.sh` na raiz do repositório com o seguinte código
 ```
 #!/bin/bash -e
-# borrowed from Erik Doernenburg:
+# with pieces borrowed from Erik Doernenburg:
 # https://my.thoughtworks.com/groups/techops-community/blog/2015/11/17/aws-account-access-via-temporary-api-tokens#comment-38435
 ROLE=becomeAdmin
 ACCOUNT=644540006937
