@@ -187,3 +187,8 @@ regions = us-east-1
 ```
 
 * Repare nos grupos dinâmicos criados pelo script e o que eles contêm.
+
+* Apague o arquivo de inventário estático
+```
+rm inventory
+```
