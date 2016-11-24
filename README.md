@@ -24,5 +24,11 @@ A quantidade de ferramentas disponíveis para automação de _builds_ e infraest
 
 ### Capítulo 2
   * [Iniciando automação](capitulo2/)
-    * [Lab01 - Customizando uma _docker image_](capitulo1/lab01.md)
-    * [Lab02 - Manipulando credenciais na automação](capitulo1/lab02.md)
+    * [Lab01 - Customizando uma _docker image_](capitulo2/lab01.md)
+    * [Lab02 - Manipulando credenciais na automação](capitulo2/lab02.md)
+
+### Capítulo 3
+  * [Introdução ao AWS CloudFormation](capitulo3/)
+    * [Lab01 - Criando uma instância com CloudFormation](capitulo3/lab01.md)
+    * [Lab02 - Passando parâmetros para o CloudFormation](capitulo3/lab02.md)
+
