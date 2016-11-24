@@ -34,7 +34,7 @@ A quantidade de ferramentas disponíveis para automação de _builds_ e infraest
 
 ### Capítulo 4
   * [Introdução ao Ansible](capitulo4/)
-    * [Lab01 - Criando uma instância com CloudFormation](capitulo4/lab01.md)
+    * [Lab01 - Preparando o container para rodar Ansible](capitulo4/lab01.md)
     * [Lab02 - Tratando segredos com Credstash](capitulo4/lab02.md)
-    * [Lab03 - abc](capitulo4/lab03.md)
+    * [Lab03 - Rodando um _playbook_](capitulo4/lab03.md)
 
